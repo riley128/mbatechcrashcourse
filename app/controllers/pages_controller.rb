@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def comments
   end
+
+  def testcourse
+  end
 end

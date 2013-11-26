@@ -4,6 +4,7 @@ Mbatechcrashcourse::Application.routes.draw do
   get "about" => "pages#about"
   get "comments" => "pages#comments"
   get "courses" => "pages#courses"
+  get "testcourse" => "pages#testcourse"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
