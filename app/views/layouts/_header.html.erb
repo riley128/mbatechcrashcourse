@@ -14,7 +14,13 @@
 	  <!-- Collect the nav links, forms, and other content for toggling -->
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
 	    <ul class="nav navbar-nav navbar-right">
+
         		<% if user_signed_in? %>
+        		   <% if current_user.has_role? :admin %>
+				      <li>
+				      <%= link_to('Admin', users_path) %>
+				      </li>
+				   <% end %>
         		  <li><%= link_to "Courses", courses_path %></li>
         		  <li><%= link_to "Q&A", comments_path %></li>
         		  <li><%= link_to "Account Settings", edit_user_registration_path %></li>

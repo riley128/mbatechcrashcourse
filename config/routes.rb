@@ -1,10 +1,13 @@
 Mbatechcrashcourse::Application.routes.draw do
+
   devise_for :users
+  resources :users
   root "pages#home"
   get "about" => "pages#about"
   get "comments" => "pages#comments"
   get "courses" => "pages#courses"
   get "testcourse" => "pages#testcourse"
+  get "administration" => "pages#administration"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

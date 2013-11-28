@@ -6,29 +6,12 @@
                   </div>
           </div>
           <div class="panel-body">
-                  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-                    
-                    <div class="form-group">
-                            <%= f.label :email %>
-                            <%= f.email_field :email, class: "form-control", :autofocus => true %>
-                          </div>
-
-                    <div class="form-group">
-                            <%= f.label :password %>
-                            <%= f.password_field :password, class: "form-control" %>
-                    </div>
-
-              <div class="form-group">
-                      <div class="checkbox">
-                              <%= f.check_box :remember_me %> 
-                              <%= f.label :remember_me %>
-                      </div>
-              </div>
-
-                    <div class="form-group">
-                            <%= f.submit "Sign in", class: "btn btn-primary" %>
-                    </div>
-                  <% end %>
+                 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-vertical' }) do |f| %>
+  <%= f.input :email, :autofocus => true %>
+  <%= f.input :password %>
+  <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+  <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
+<% end %>
           </div>
           <div class="panel-footer">
                   <%= render "devise/shared/links" %>

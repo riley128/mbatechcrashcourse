@@ -22,6 +22,7 @@ module Mbatechcrashcourse
     # config.i18n.default_locale = :de
 
     #required for heroku
+    config.filter_parameters += [:password, :password_confirmation]
     config.assets.initialize_on_precompile = false
   end
 end
