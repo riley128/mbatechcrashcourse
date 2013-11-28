@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-gem 'sqlite3'
+
 group :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'coffee-rails', '~> 4.0.0'
@@ -28,6 +28,7 @@ gem 'devise', '~> 3.1.1'
 group :development, :test do
      gem 'sqlite3'
 end
+
 group :production do
      gem 'pg'
      gem 'rails_12factor'
