@@ -1,7 +1,7 @@
 Mbatechcrashcourse::Application.routes.draw do
 
   get "courses/VIP" => "content#VIP", :as => :content_VIP
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => 'registrations' }
   resources :users
   root "pages#home"
   get "about" => "pages#about"
