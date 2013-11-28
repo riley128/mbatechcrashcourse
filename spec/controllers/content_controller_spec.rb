@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe CoursesController do
+describe ContentController do
 
-  describe "GET 'monthly'" do
+  describe "GET 'VIP'" do
     it "returns http success" do
-      get 'monthly'
+      get 'VIP'
       response.should be_success
     end
   end

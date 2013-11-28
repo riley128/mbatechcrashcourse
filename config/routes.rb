@@ -1,5 +1,6 @@
 Mbatechcrashcourse::Application.routes.draw do
 
+  get "courses/VIP" => "content#VIP", :as => :content_VIP
   devise_for :users
   resources :users
   root "pages#home"
